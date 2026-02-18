@@ -21,7 +21,8 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         h1 { color: #2c3e50; }
-        h2 { color: #34495e; margin-top: 25px; }
+        h2 { color: #34495e; margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        h3 { color: #e74c3c; margin-top: 20px; font-size: 1.1em; }
         .tabs {
             display: flex;
             margin-bottom: 30px;
@@ -43,6 +44,8 @@
         }
         .content { display: none; }
         .content.active { display: block; }
+        ul { margin-bottom: 15px; }
+        li { margin-bottom: 5px; }
         .footer {
             margin-top: 40px;
             font-size: 0.9em;
@@ -55,111 +58,138 @@
 
 <div class="container">
     <div class="tabs">
-        <button class="tab-btn active" onclick="openTab('en')">English</button>
-        <button class="tab-btn" onclick="openTab('es')">Español</button>
-        <button class="tab-btn" onclick="openTab('ca')">Català</button>
+        <button class="tab-btn active" onclick="openTab('en', 0)">English</button>
+        <button class="tab-btn" onclick="openTab('es', 1)">Español</button>
+        <button class="tab-btn" onclick="openTab('ca', 2)">Català</button>
     </div>
 
     <div id="en" class="content active">
         <h1>Privacy Policy</h1>
-        <p><strong>Last updated:</strong> January 9th, 2026</p>
+        <p><strong>Last updated:</strong> February 20th, 2026</p>
 
         <p>This Privacy Policy explains how <strong>BCNTransit</strong> ("we", "our", or "us") collects, uses, and discloses information about you when you use our mobile application.</p>
 
         <h2>1. Information We Collect</h2>
 
         <h3>1.1 Location Data</h3>
-        <p>Our app requests access to your device's location (GPS). This data is used solely to identify your current position and display the transport stops closest to you. We do not store your location history on our servers, nor do we track your movements when the app is not in use.</p>
+        <p>Our app requests access to your device's location (GPS). This data is used solely to identify your current position and display the transport stops closest to you. We do not track your movements when the app is not in use.</p>
 
-        <h3>1.2 Device Identifiers (Android ID)</h3>
-        <p>We may collect your unique device identifier (Android ID) to save your preferences, search history, and favorite routes locally or on our backend to provide a seamless experience. This identifier is not linked to your personal name, email, or phone number.</p>
+        <h3>1.2 User Accounts & Registration</h3>
+        <p>If you choose to create an account or log in, we may collect your email address and name to authenticate you and sync your premium status. This data is securely stored and is not shared with third parties for marketing purposes.</p>
+
+        <h3>1.3 Advertising Data</h3>
+        <p>The free version of the app includes advertisements. We use Google AdMob to display ads. AdMob may collect data such as your Advertising ID (AAID) and device information to provide personalized ads and measure performance.</p>
 
         <h2>2. How We Use Information</h2>
         <ul>
-            <li>To provide, maintain, and improve the app's functionality.</li>
-            <li>To show real-time bus/metro arrival times based on your requests.</li>
-            <li>To save your "Recent Searches" and preferences.</li>
+            <li>To provide the Live Map and real-time arrival estimates.</li>
+            <li>To manage your <strong>Premium Subscription</strong> status and restore purchases.</li>
+            <li>To enforce usage limits on free features (e.g., daily Live Map limits).</li>
+            <li>To display Rewarded Ads when you voluntarily choose to unlock features.</li>
         </ul>
 
-        <h2>3. Third-Party Services</h2>
-        <p>We may use third-party services that collect information used to identify you, such as:</p>
+        <h2>3. Payments & Subscriptions</h2>
+        <p>We offer a Premium subscription. All financial transactions are handled directly by <strong>Google Play</strong>. We do not store or process your credit card information on our servers.</p>
+
+        <h2>4. Third-Party Services</h2>
+        <p>We use third-party services that may collect information used to identify you:</p>
         <ul>
-            <li><strong>Google Play Services:</strong> For maps and location handling.</li>
+            <li><strong>Google Play Services:</strong> Map and location handling.</li>
+            <li><strong>Google AdMob:</strong> Advertising network.</li>
+            <li><strong>Firebase Authentication:</strong> Secure user login management.</li>
         </ul>
 
-        <h2>4. Data Security</h2>
-        <p>We value your trust in providing us your information, thus we are striving to use commercially acceptable means of protecting it. However, remember that no method of transmission over the internet is 100% secure and reliable.</p>
+        <h2>5. Data Security</h2>
+        <p>We value your trust. We use commercially acceptable means to protect your personal information, though no method of transmission over the internet is 100% secure.</p>
 
-        <h2>5. Contact Us</h2>
-        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <strong>bcntransit.app@gmail.com</strong>.</p>
+        <h2>6. Contact Us</h2>
+        <p>If you have questions about our Privacy Policy, contact us at: <strong>bcntransit.app@gmail.com</strong>.</p>
     </div>
 
     <div id="es" class="content">
         <h1>Política de Privacidad</h1>
-        <p><strong>Última actualización:</strong> 9 Enero, 2026</p>
+        <p><strong>Última actualización:</strong> 20 Febrero, 2026</p>
 
         <p>Esta Política de Privacidad explica cómo <strong>BCNTransit</strong> ("nosotros", "nuestro") recopila, utiliza y divulga información sobre usted cuando utiliza nuestra aplicación móvil.</p>
 
         <h2>1. Información que recopilamos</h2>
 
         <h3>1.1 Datos de ubicación</h3>
-        <p>Nuestra aplicación solicita acceso a la ubicación de su dispositivo (GPS). Estos datos se utilizan únicamente para identificar su posición actual y mostrar las paradas de transporte más cercanas a usted. No almacenamos su historial de ubicaciones en nuestros servidores ni rastreamos sus movimientos cuando la aplicación no está en uso.</p>
+        <p>Nuestra app solicita acceso a la ubicación (GPS) únicamente para mostrar las paradas de transporte más cercanas. No rastreamos sus movimientos cuando la app no está en uso.</p>
 
-        <h3>1.2 Identificadores del dispositivo (Android ID)</h3>
-        <p>Podemos recopilar el identificador único de su dispositivo (Android ID) para guardar sus preferencias, historial de búsqueda y rutas favoritas. Este identificador no está vinculado a su nombre personal, correo electrónico o número de teléfono.</p>
+        <h3>1.2 Cuentas de Usuario y Registro</h3>
+        <p>Si decide crear una cuenta o iniciar sesión, podemos recopilar su correo electrónico y nombre para autenticarle y sincronizar su estado Premium. Estos datos se almacenan de forma segura y no se comparten con terceros para marketing.</p>
+
+        <h3>1.3 Datos de Publicidad</h3>
+        <p>La versión gratuita incluye anuncios. Utilizamos Google AdMob para mostrarlos. AdMob puede recopilar datos como su ID de publicidad (AAID) e información del dispositivo para ofrecer anuncios personalizados.</p>
 
         <h2>2. Cómo utilizamos la información</h2>
         <ul>
-            <li>Para proporcionar, mantener y mejorar la funcionalidad de la aplicación.</li>
-            <li>Para mostrar los tiempos de llegada de autobuses/metro en tiempo real.</li>
-            <li>Para guardar sus "Búsquedas recientes" y configuración.</li>
+            <li>Para proporcionar el Mapa en Vivo y estimaciones de llegada.</li>
+            <li>Para gestionar su estado de <strong>Suscripción Premium</strong> y restaurar compras.</li>
+            <li>Para aplicar límites de uso en funciones gratuitas (ej. límites diarios del Mapa en Vivo).</li>
+            <li>Para mostrar Anuncios Bonificados cuando usted decide desbloquear funciones voluntariamente.</li>
         </ul>
 
-        <h2>3. Servicios de terceros</h2>
-        <p>Podemos utilizar servicios de terceros que recopilan información utilizada para identificarle, como:</p>
+        <h2>3. Pagos y Suscripciones</h2>
+        <p>Ofrecemos una suscripción Premium. Todas las transacciones financieras son gestionadas directamente por <strong>Google Play</strong>. Nosotros no almacenamos ni procesamos los datos de su tarjeta de crédito.</p>
+
+        <h2>4. Servicios de terceros</h2>
+        <p>Utilizamos servicios de terceros que pueden recopilar información para identificarle:</p>
         <ul>
-            <li><strong>Google Play Services:</strong> Para la gestión de mapas y ubicación.</li>
+            <li><strong>Google Play Services:</strong> Gestión de mapas y ubicación.</li>
+            <li><strong>Google AdMob:</strong> Red de publicidad.</li>
+            <li><strong>Firebase Authentication:</strong> Gestión segura de inicio de sesión.</li>
         </ul>
 
-        <h2>4. Seguridad de los datos</h2>
-        <p>Valoramos su confianza al proporcionarnos su información, por lo que nos esforzamos por utilizar medios comercialmente aceptables para protegerla. Sin embargo, recuerde que ningún método de transmisión a través de Internet es 100% seguro.</p>
+        <h2>5. Seguridad de los datos</h2>
+        <p>Valoramos su confianza. Utilizamos medios comercialmente aceptables para proteger su información, aunque ningún método de transmisión por Internet es 100% seguro.</p>
 
-        <h2>5. Contacto</h2>
-        <p>Si tiene alguna pregunta o sugerencia sobre nuestra Política de Privacidad, no dude en contactarnos en: <strong>bcntransit.app@gmail.com</strong>.</p>
+        <h2>6. Contacto</h2>
+        <p>Si tiene preguntas sobre nuestra Política de Privacidad, contáctenos en: <strong>bcntransit.app@gmail.com</strong>.</p>
     </div>
 
     <div id="ca" class="content">
         <h1>Política de Privacitat</h1>
-        <p><strong>Darrera actualització:</strong> 9 Gener, 2026</p>
+        <p><strong>Darrera actualització:</strong> 20 Febrer, 2026</p>
 
         <p>Aquesta Política de Privacitat explica com <strong>BCNTransit</strong> ("nosaltres", "nostre") recopila, utilitza i divulga informació sobre vostè quan utilitza la nostra aplicació mòbil.</p>
 
         <h2>1. Informació que recopilem</h2>
 
         <h3>1.1 Dades d'ubicació</h3>
-        <p>La nostra aplicació sol·licita accés a la ubicació del seu dispositiu (GPS). Aquestes dades s'utilitzen únicament per identificar la seva posició actual i mostrar les parades de transport més properes a vostè. No emmagatzemem el seu historial d'ubicacions als nostres servidors ni rastregem els seus moviments quan l'aplicació no està en ús.</p>
+        <p>La nostra app sol·licita accés a la ubicació (GPS) únicament per mostrar les parades de transport més properes. No rastregem els seus moviments quan l'app no està en ús.</p>
 
-        <h3>1.2 Identificadors del dispositiu (Android ID)</h3>
-        <p>Podem recopilar l'identificador únic del seu dispositiu (Android ID) per desar les seves preferències, historial de cerca i rutes preferides. Aquest identificador no està vinculat al seu nom personal, correu electrònic o número de telèfon.</p>
+        <h3>1.2 Comptes d'Usuari i Registre</h3>
+        <p>Si decideix crear un compte o iniciar sessió, podem recopilar el seu correu electrònic i nom per autenticar-lo i sincronitzar el seu estat Premium. Aquestes dades s'emmagatzemen de forma segura.</p>
+
+        <h3>1.3 Dades de Publicitat</h3>
+        <p>La versió gratuïta inclou anuncis. Utilitzem Google AdMob per mostrar-los. AdMob pot recopilar dades com el seu ID de publicitat (AAID) per oferir anuncis personalitzats.</p>
 
         <h2>2. Com utilitzem la informació</h2>
         <ul>
-            <li>Per proporcionar, mantenir i millorar la funcionalitat de l'aplicació.</li>
-            <li>Per mostrar els temps d'arribada d'autobusos/metro en temps real.</li>
-            <li>Per desar les seves "Cerques recents" i configuració.</li>
+            <li>Per proporcionar el Mapa en Viu i estimacions d'arribada.</li>
+            <li>Per gestionar el seu estat de <strong>Subscripció Premium</strong> i restaurar compres.</li>
+            <li>Per aplicar límits d'ús en funcions gratuïtes (ex. límits diaris del Mapa en Viu).</li>
+            <li>Per mostrar Anuncis Bonificats quan vostè decideix desbloquejar funcions voluntàriament.</li>
         </ul>
 
-        <h2>3. Serveis de tercers</h2>
-        <p>Podem utilitzar serveis de tercers que recopilen informació utilitzada per identificar-lo, com ara:</p>
+        <h2>3. Pagaments i Subscripcions</h2>
+        <p>Oferim una subscripció Premium. Totes les transaccions financeres són gestionades directament per <strong>Google Play</strong>. Nosaltres no emmagatzemem ni processem les dades de la seva targeta de crèdit.</p>
+
+        <h2>4. Serveis de tercers</h2>
+        <p>Utilitzem serveis de tercers que poden recopilar informació per identificar-lo:</p>
         <ul>
-            <li><strong>Google Play Services:</strong> Per a la gestió de mapes i ubicació.</li>
+            <li><strong>Google Play Services:</strong> Gestió de mapes i ubicació.</li>
+            <li><strong>Google AdMob:</strong> Xarxa de publicitat.</li>
+            <li><strong>Firebase Authentication:</strong> Gestió segura d'inici de sessió.</li>
         </ul>
 
-        <h2>4. Seguretat de les dades</h2>
-        <p>Valorem la seva confiança en proporcionar-nos la seva informació, per la qual cosa ens esforcem per utilitzar mitjans comercialment acceptables per protegir-la. No obstant això, recordi que cap mètode de transmissió a través d'Internet és 100% segur.</p>
+        <h2>5. Seguretat de les dades</h2>
+        <p>Valorem la seva confiança. Utilitzem mitjans comercialment acceptables per protegir la seva informació, tot i que cap mètode de transmissió per Internet és 100% segur.</p>
 
-        <h2>5. Contacte</h2>
-        <p>Si té alguna pregunta o suggeriment sobre la nostra Política de Privacitat, no dubti en contactar-nos a: <strong>bcntransit.app@gmail.com</strong>.</p>
+        <h2>6. Contacte</h2>
+        <p>Si té preguntes sobre la nostra Política de Privacitat, contacti'ns a: <strong>bcntransit.app@gmail.com</strong>.</p>
     </div>
 
     <div class="footer">
@@ -168,7 +198,7 @@
 </div>
 
 <script>
-    function openTab(lang) {
+    function openTab(lang, index) {
         // Hide all contents
         var contents = document.getElementsByClassName('content');
         for (var i = 0; i < contents.length; i++) {
@@ -183,15 +213,7 @@
 
         // Show selected content and activate button
         document.getElementById(lang).classList.add('active');
-
-        // Find the button that was clicked (based on text logic or event)
-        // Simple way: iterate and match specific index, or simpler:
-        // Re-loop to find the button that calls this function isn't easy without 'this',
-        // so let's use a simpler mapping since we only have 3 buttons.
-        var btnIndex = 0;
-        if(lang === 'es') btnIndex = 1;
-        if(lang === 'ca') btnIndex = 2;
-        buttons[btnIndex].classList.add('active');
+        buttons[index].classList.add('active');
     }
 </script>
 
