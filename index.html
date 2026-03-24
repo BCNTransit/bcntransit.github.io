@@ -29,14 +29,12 @@
             overflow-x: hidden;
         }
 
-        /* --- Estilos Generales --- */
         .gradient-text {
             background: linear-gradient(to right, #e11d48, #be123c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* --- Fondo Hero Animado --- */
         .hero-blobs {
             position: absolute;
             top: 0;
@@ -83,7 +81,6 @@
             }
         }
 
-        /* --- Mockup del Teléfono --- */
         .phone-mockup {
             box-shadow: 0 50px 100px -20px rgba(225, 29, 72, 0.2);
             border: 12px solid #111827;
@@ -97,12 +94,10 @@
             transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(-10px);
         }
 
-        /* --- Marquee (Carrusel Infinito) PERFECTO --- */
         .marquee-container {
             display: flex;
             overflow: hidden;
             user-select: none;
-            /* Máscara para suavizar bordes */
             mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
             -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
@@ -113,11 +108,8 @@
             align-items: center;
             justify-content: flex-start;
             min-width: 100%;
-
-            /* TRUCO MATEMÁTICO: gap y padding-right deben ser IGUALES */
             gap: 4rem;
             padding-right: 4rem;
-
             animation: scroll 400s linear infinite;
         }
 
@@ -155,36 +147,28 @@
             object-fit: contain;
         }
 
-        /* --- Carrusel de Imágenes Crossfade --- */
-
         .animate-carousel {
             opacity: 0;
-            /* Empiezan invisibles */
-            animation: carouselFade 16s infinite;
-            /* 12s = 3 imágenes x 4s cada una */
+            animation: carouselFade 32s infinite;
         }
 
         @keyframes carouselFade {
             0% {
                 opacity: 0;
                 transform: scale(1);
-                /* Efecto zoom suave entrada */
             }
 
-            5% {
+            3.125% {
                 opacity: 1;
             }
 
-            33% {
+            12.5% {
                 opacity: 1;
-                /* Se mantiene visible 1/3 del tiempo */
                 transform: scale(1);
-                /* Zoom normal */
             }
 
-            38% {
+            15.625% {
                 opacity: 0;
-                /* Se desvanece */
             }
 
             100% {
@@ -284,23 +268,23 @@
 
                                 <img src="assets/screenshot7.png"
                                     class="absolute inset-0 w-full h-full object-cover animate-carousel"
-                                    style="animation-delay: 8s;">
+                                    style="animation-delay: 12s;">
 
                                 <img src="assets/screenshot3.png"
                                     class="absolute inset-0 w-full h-full object-cover animate-carousel"
-                                    style="animation-delay: 12s;">
+                                    style="animation-delay: 16s;">
 
                                 <img src="assets/screenshot4.png"
                                     class="absolute inset-0 w-full h-full object-cover animate-carousel"
-                                    style="animation-delay: 16s;">
+                                    style="animation-delay: 20s;">
 
                                 <img src="assets/screenshot5.png"
                                     class="absolute inset-0 w-full h-full object-cover animate-carousel"
-                                    style="animation-delay: 20s;">
+                                    style="animation-delay: 24s;">
 
                                 <img src="assets/screenshot6.png"
                                     class="absolute inset-0 w-full h-full object-cover animate-carousel"
-                                    style="animation-delay: 24s;">
+                                    style="animation-delay: 28s;">
                             </div>
                         </div>
                     </div>
@@ -317,91 +301,6 @@
         <div class="marquee-container">
 
             <div class="marquee-group">
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/acces.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Metro</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TB_PARADA.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Bus</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TRAM.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#5A9F31]">TRAM</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/RODALIES.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#EE7F00]">Rodalies</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/FGC.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#80C342]">FGC</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/BICING.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]"></span></div>
-                <div class="marquee-item"><img
-                        src="https://play-lh.googleusercontent.com/0D37UgjTgs7ycSCTpkVQOVnpbvEerHwy3FSSH4gKpUQHbvGTAylvajkuYNOQGYV1Fcg=w480-h960-rw"
-                        class="transport-logo p-1"> <span class="ml-3 font-bold text-xl text-[#20385D]">AMBici</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/acces.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Metro</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TB_PARADA.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Bus</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TRAM.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#5A9F31]">TRAM</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/RODALIES.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#EE7F00]">Rodalies</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/FGC.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#80C342]">FGC</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/BICING.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]"></span></div>
-                <div class="marquee-item"><img
-                        src="https://play-lh.googleusercontent.com/0D37UgjTgs7ycSCTpkVQOVnpbvEerHwy3FSSH4gKpUQHbvGTAylvajkuYNOQGYV1Fcg=w480-h960-rw"
-                        class="transport-logo p-1"> <span class="ml-3 font-bold text-xl text-[#20385D]">AMBici</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/acces.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Metro</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TB_PARADA.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Bus</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TRAM.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#5A9F31]">TRAM</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/RODALIES.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#EE7F00]">Rodalies</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/FGC.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#80C342]">FGC</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/BICING.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]"></span></div>
-                <div class="marquee-item"><img
-                        src="https://play-lh.googleusercontent.com/0D37UgjTgs7ycSCTpkVQOVnpbvEerHwy3FSSH4gKpUQHbvGTAylvajkuYNOQGYV1Fcg=w480-h960-rw"
-                        class="transport-logo p-1"> <span class="ml-3 font-bold text-xl text-[#20385D]">AMBici</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/acces.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Metro</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TB_PARADA.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Bus</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TRAM.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#5A9F31]">TRAM</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/RODALIES.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#EE7F00]">Rodalies</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/FGC.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#80C342]">FGC</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/BICING.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]"></span></div>
-                <div class="marquee-item"><img
-                        src="https://play-lh.googleusercontent.com/0D37UgjTgs7ycSCTpkVQOVnpbvEerHwy3FSSH4gKpUQHbvGTAylvajkuYNOQGYV1Fcg=w480-h960-rw"
-                        class="transport-logo p-1"> <span class="ml-3 font-bold text-xl text-[#20385D]">AMBici</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/acces.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Metro</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TB_PARADA.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Bus</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TRAM.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#5A9F31]">TRAM</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/RODALIES.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#EE7F00]">Rodalies</span>
-                </div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/FGC.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#80C342]">FGC</span></div>
-                <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/BICING.svg"
-                        class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]"></span></div>
-                <div class="marquee-item"><img
-                        src="https://play-lh.googleusercontent.com/0D37UgjTgs7ycSCTpkVQOVnpbvEerHwy3FSSH4gKpUQHbvGTAylvajkuYNOQGYV1Fcg=w480-h960-rw"
-                        class="transport-logo p-1"> <span class="ml-3 font-bold text-xl text-[#20385D]">AMBici</span>
-                </div>
                 <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/acces.svg"
                         class="transport-logo"> <span class="ml-3 font-bold text-xl text-[#DA291C]">Metro</span></div>
                 <div class="marquee-item"><img src="https://tmb-barcelona.github.io/TMB-Icons/svg/TB_PARADA.svg"
@@ -625,7 +524,7 @@
             </div>
             <div
                 class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
-                <p>&copy; 2026 BCNTransit. No afiliado oficialmente a TMB o AMB.</p>
+                <p>© 2026 BCNTransit. No afiliado oficialmente a TMB o AMB.</p>
                 <div class="flex gap-4 mt-4 md:mt-0">
                     <img src="https://tmb-barcelona.github.io/TMB-Icons/svg/acces.svg"
                         class="h-6 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition"
